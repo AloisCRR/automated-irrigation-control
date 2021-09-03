@@ -1,0 +1,16 @@
+{
+  "name": "project-presentation",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "reveal.js": "^4.1.3",
+    "vite": "^2.5.2"
+  },
+  "dependencies": {
+    "highlight.js": "^11.2.0"
+  }
+}
