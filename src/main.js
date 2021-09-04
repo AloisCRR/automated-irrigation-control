@@ -1,15 +1,16 @@
-import "highlight.js/styles/atom-one-dark.css";
 import Reveal from "reveal.js";
 import "reveal.js/dist/reveal.css";
-import "reveal.js/dist/theme/moon.css";
 import Highlight from "reveal.js/plugin/highlight/highlight";
-import Markdown from "reveal.js/plugin/markdown/markdown";
 import Zoom from "reveal.js/plugin/zoom/zoom";
+import "./styles/code/atom-one-dark.css";
 import "./styles/globals.css";
+import "./styles/theme/source/custom.scss";
 
 const deck = new Reveal();
 deck.initialize({
   hash: true,
   margin: 0,
-  plugins: [Markdown, Highlight, Zoom],
+  disableLayout: true,
+  hideCursorTime: 500,
+  plugins: [Highlight, Zoom],
 });
