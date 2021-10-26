@@ -1,0 +1,49 @@
+.animation {
+  position: absolute;
+  height: 100vh;
+  inset: 0;
+}
+
+.loader {
+  position: relative;
+}
+
+.outer,
+.middle,
+.inner {
+  border: 3px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.outer {
+  width: calc(3.5em * 7);
+  height: calc(3.5em * 7);
+  margin-left: calc(-1.75em * 7);
+  margin-top: calc(-1.75em * 7);
+  animation: spin 6s linear infinite;
+}
+
+.middle {
+  width: calc(2.1em * 7);
+  height: calc(2.1em * 7);
+  margin-left: calc(-1.05em * 7);
+  margin-top: calc(-1.05em * 7);
+  animation: spin 5.5s linear reverse infinite;
+}
+
+.inner {
+  width: calc(0.8em * 7);
+  height: calc(0.8em * 7);
+  margin-left: calc(-0.4em * 7);
+  margin-top: calc(-0.4em * 7);
+  animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

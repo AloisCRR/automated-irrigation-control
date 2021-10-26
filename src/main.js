@@ -5,6 +5,7 @@ import Pointer from "reveal.js-pointer/dist/pointer.esm";
 import "reveal.js/dist/reveal.css";
 import Highlight from "reveal.js/plugin/highlight/highlight.esm";
 import Zoom from "reveal.js/plugin/zoom/zoom.esm";
+import "./styles/animations.css";
 import "./styles/code/atom-one-dark.css";
 import "./styles/globals.css";
 import "./styles/theme/source/custom.scss";
