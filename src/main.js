@@ -17,7 +17,6 @@ deck.initialize({
   overview: false,
   hideCursorTime: 500,
   plugins: [Highlight, Zoom, Menu, Pointer],
-  transition: "fade",
   menu: {
     path: "node_modules/reveal.js-menu",
   },
