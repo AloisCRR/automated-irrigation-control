@@ -23,17 +23,17 @@
             <div>
               <img
                 class="logo"
-                src="./src/images/logo-utp.png"
+                data-src="./src/images/logo-utp.png"
                 alt="UTP Logo"
               />
               <img
                 class="logo"
-                src="./src/images/logo-fisc.png"
+                data-src="./src/images/logo-fisc.png"
                 alt="FISC UTP Logo"
               />
               <img
                 class="logo"
-                src="src/images/robotsis.png"
+                data-src="src/images/robotsis.png"
                 alt="ROBOTSIS UTP Logo"
               />
             </div>
@@ -171,25 +171,57 @@
           </div>
         </section>
         <section
-          data-background="radial-gradient( circle farthest-corner at 10% 20%,  rgba(0,152,155,1) 0.1%, rgba(0,94,120,1) 94.2% )"
+          data-background="radial-gradient( circle farthest-corner at 10% 20%,  rgba(249,57,170,1) 9.8%, rgba(134,176,255,1) 94.9% )"
         >
           <div class="animation">
+            <div class="loader pos-0">
+              <div class="outer"></div>
+            </div>
+            <div class="loader pos-1">
+              <div class="outer"></div>
+            </div>
+            <div class="loader pos-2">
+              <div class="outer"></div>
+              <div class="middle"></div>
+            </div>
+            <div class="loader pos-3">
+              <div class="outer"></div>
+              <div class="middle"></div>
+            </div>
             <img
-              class="img-rounded rounded-full absolute top-48 left-36 w-96 h-96"
-              src="./src/images/irrigation-1.jpeg"
+              class="img-rounded rounded-full absolute pos-0 w-80 h-80"
+              data-src="./src/images/irrigation-1.jpeg"
+              alt="Rounded image"
+            />
+            <img
+              class="img-rounded rounded-full absolute pos-1 w-80 h-80"
+              data-src="./src/images/irrigation-2.jpeg"
+              alt="Rounded image"
+            />
+            <img
+              class="
+                object-cover object-bottom
+                img-rounded
+                rounded-full
+                absolute
+                pos-2
+                w-52
+                h-52
+              "
+              data-src="./src/images/irrigation-3.jpeg"
               alt="Rounded image"
             />
             <img
               class="
                 img-rounded
+                object-left
                 rounded-full
                 absolute
-                top-96
-                left-2/3
-                w-96
-                h-96
+                pos-3
+                w-52
+                h-52
               "
-              src="./src/images/irrigation-2.jpeg"
+              data-src="./src/images/irrigation-4.jpeg"
               alt="Rounded image"
             />
           </div>
@@ -198,21 +230,149 @@
           </h1>
           <div class="flex justify-center items-start">
             <div class="black-glassmorphism p-12">
-              <p class="text-justify max-w-5xl font-extralight text-xl">
-                El reto por superar es la automatización, ¿cómo se puede
-                implementar un sistema inteligente que maneje y optimice una
-                finca de producción?, por ejemplo, es una situación compleja en
-                la que actualidad puede ser modelada utilizando tecnología IoT,
-                esta tecnología no es más que todos aquellos dispositivos con
-                capacidad de interconectarse con otros o con un dispositivo
-                central que actúe como base de procesamiento[1], estos también
-                cumplen la función de recolectar cantidades exorbitantes de
-                datos, los cuales posteriormente pueden ser analizados para
-                generar modelos que respondan ante cierta característica que sea
-                escogida, como por ejemplo el control de agua.
+              <p class="text-justify max-w-6xl font-extralight text-2xl">
+                El reto por superar es la <strong>automatización</strong>, ¿cómo
+                se puede implementar un sistema inteligente que maneje y
+                optimice una finca en estado de producción?, es una situación
+                compleja que en la actualidad puede ser modelada utilizando
+                <strong>tecnología IoT</strong>, esta tecnología no es más que
+                todos aquellos dispositivos con capacidad de interconectarse con
+                otros o con un dispositivo central que actúe como base de
+                procesamiento, estos también cumplen la función de recolectar
+                cantidades exorbitantes de <strong>datos</strong>, los cuales
+                posteriormente pueden ser analizados para generar modelos que
+                respondan ante cierta característica que sea escogida, como por
+                ejemplo el <strong>control de agua</strong>.
               </p>
             </div>
           </div>
+        </section>
+        <section>
+          <section
+            data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+          >
+            <div class="p-10 mt-48 glassmorphism inline-flex items-center">
+              <h1 class="text-9xl font-semibold text-gray-700">Hardware</h1>
+              <img
+                class="ml-10 inline opacity-80"
+                src="./src/images/tech.png"
+                width="150px"
+                height="136.5px"
+                alt="Tech icon"
+              />
+            </div>
+            <p class="mt-14 text-gray-700 text-4xl font-light">
+              Tecnologías de hardware propuestas
+            </p>
+          </section>
+          <section
+            data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+          >
+            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+              <h1 class="text-7xl font-semibold text-gray-700">Gateway</h1>
+              <img
+                class="ml-8 inline opacity-80"
+                src="./src/images/gateway.png"
+                width="100px"
+                height="100px"
+                alt="Tech icon"
+              />
+            </div>
+            <p class="mt-14 text-gray-700 text-xl font-light">
+              Traducen y retransmiten información, normalmente enlazando redes
+              de dispositivos locales con internet.
+            </p>
+            <div
+              class="relative inline-flex justify-center items-center mt-28 p-5"
+            >
+              <div class="fragment flex flex-col gap-10">
+                <span class="text-gray-700 text-lg font-medium">Sensores</span>
+                <img
+                  src="./src/images/sensor.png"
+                  width="80px"
+                  height="80px"
+                  alt="Sensor"
+                />
+                <img
+                  src="./src/images/sensor.png"
+                  width="80px"
+                  height="80px"
+                  alt="Sensor"
+                />
+                <img
+                  src="./src/images/sensor.png"
+                  width="80px"
+                  height="80px"
+                  alt="Sensor"
+                />
+              </div>
+              <div class="fragment flex">
+                <img
+                  class="mx-8"
+                  data-src="./src/images/right-arrow.png"
+                  alt="Right arrow"
+                />
+                <div>
+                  <img
+                    src="./src/images/microcontroller.png"
+                    alt="Microcontroller"
+                  />
+                  <p class="text-gray-700">Microcontrolador</p>
+                </div>
+              </div>
+              <div class="fragment flex">
+                <img
+                  class="inline-block transform rotate-180 mx-8"
+                  data-src="./src/images/right-arrow.png"
+                  alt="Right arrow"
+                />
+                <div>
+                  <img
+                    class="inline-block"
+                    data-src="./src/images/water-tap.png"
+                    alt="Actuator"
+                  />
+                  <p class="text-gray-700">Actuador</p>
+                </div>
+              </div>
+              <div
+                style="right: 33%"
+                class="
+                  fragment
+                  absolute
+                  top-0
+                  bottom-0
+                  left-0
+                  border-2 border-black
+                "
+              ></div>
+              <div class="fragment flex ml-16">
+                <img
+                  class="mr-10"
+                  data-src="./src/images/right-arrow.png"
+                  alt="Right arrow"
+                />
+                <div class="r-stack">
+                  <div class="fragment fade-out">
+                    <img
+                      data-src="./src/images/rpi.png"
+                      width="150px"
+                      alt="RPi"
+                    />
+                    <p class="text-gray-700 mt-3">Raspberry Pi</p>
+                  </div>
+                  <div class="fragment">
+                    <img
+                      data-src="./src/images/rpi-pico.png"
+                      width="150px"
+                      alt="RPi Pico"
+                    />
+                    <p class="text-gray-700 mt-3">Raspberry Pi Pico</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </section>
       </div>
     </div>

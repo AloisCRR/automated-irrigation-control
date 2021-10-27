@@ -36,6 +36,27 @@
 .img-rounded {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: translate(-50%, -50%);
+}
+
+.pos-0 {
+  left: 20%;
+  top: 75%;
+}
+
+.pos-1 {
+  left: 85%;
+  top: 25%;
+}
+
+.pos-2 {
+  left: 10%;
+  top: 20%;
+}
+
+.pos-3 {
+  left: 60%;
+  top: 65%;
 }
 
 .black-glassmorphism {

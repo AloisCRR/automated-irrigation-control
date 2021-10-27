@@ -21,4 +21,5 @@ deck.initialize({
   menu: {
     path: "node_modules/reveal.js-menu",
   },
+  viewDistance: 2,
 });
