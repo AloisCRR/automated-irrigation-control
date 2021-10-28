@@ -4,6 +4,7 @@ import "reveal.js-pointer/dist/pointer.css";
 import Pointer from "reveal.js-pointer/dist/pointer.esm";
 import "reveal.js/dist/reveal.css";
 import Highlight from "reveal.js/plugin/highlight/highlight.esm";
+import Notes from "reveal.js/plugin/notes/notes.esm";
 import Zoom from "reveal.js/plugin/zoom/zoom.esm";
 import "./styles/animations.css";
 import "./styles/code/atom-one-dark.css";
@@ -17,7 +18,7 @@ deck.initialize({
   disableLayout: true,
   overview: false,
   hideCursorTime: 500,
-  plugins: [Highlight, Zoom, Menu, Pointer],
+  plugins: [Highlight, Zoom, Menu, Pointer, Notes],
   menu: {
     path: "node_modules/reveal.js-menu",
   },
