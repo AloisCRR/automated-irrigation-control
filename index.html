@@ -420,6 +420,37 @@
               teléfonos utilizando bluetooth.
               <br />
               <br />
+              Zigbee admite tres tipos de topologías: topología en estrella,
+              topología peer-to-peer y cluster-tree. En la topología en
+              estrella, la comunicación se establece entre los dispositivos y un
+              único controlador central, denominado coordinador PAN.
+              <br />
+              <br />
+              Topología de árbol de clústeres: Una topología de árbol de
+              clústeres es un caso especial de topología de árbol en el que un
+              padre con sus hijos se llama clúster. Cada clúster se identifica
+              con un ID de clúster. ZigBee no admite la topología de árbol de
+              clústeres, pero IEEE 802.15.4 sí la admite.
+              <br />
+              <br />
+              Los módulos XBee-802.15.4 pueden utilizar un firmware opcional
+              (DigiMesh) para poder crear redes de malla en lugar de la habitual
+              topología punto a punto.
+              <br />
+              <br />
+              Topología de malla: La topología de malla, también denominada red
+              peer-to-peer, está formada por un coordinador, varios routers y
+              dispositivos finales.
+              <br />
+              <br />
+              Multipunto: Más de dos dispositivos específicos comparten un mismo
+              enlace.
+              <br />
+              <br />
+              Topología multipunto: La topología multipunto se basa en
+              "compartir". En este tipo de topología, cada nodo de la red sólo
+              tiene una conexión. La topología de bus es un ejemplo común de
+              topología multipunto.
             </aside>
             <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">Comunicación</h1>
@@ -499,7 +530,8 @@
                   diagrama se puede ver cómo se pueden construir redes que se
                   comporten de diversas maneras con el uso de diferentes
                   protocolos inalámbricos. El mejor protocolo depende de varios
-                  factores, como la distancia entre los nodos de comunicación de
+                  factores, como la
+                  <strong>distancia entre los nodos</strong> de comunicación de
                   la red.
                 </p>
                 <img
@@ -961,7 +993,7 @@
                   El NRF24L01+ es una versión más nueva del NRF24L01, capaz de
                   hacer un extra de 250kbps de velocidad de datos al aire
                   mientras que el que no tiene "+" sólo tiene 1Mbps y 2Mbps.
-                  Utiliza las bandas ISM de 2.5-2.5 GHz. 125 canales,
+                  Utiliza las bandas ISM de 2.4-2.5 GHz. 125 canales,
                   comunicación multipunto y salto de frecuencia.
                   <br />
                   <br />
@@ -1486,34 +1518,94 @@
               datos de series temporales, datos RFID y datos sensoriales, entre
               otros.
             </p>
-            <div class="flex items-center gap-10 mx-16">
-              <div class="text-gray-700 glassmorphism p-14">
-                <h3 class="font-medium mb-6 text-xl text-left">InfluxDB</h3>
-                <p class="text-justify font-extralight text-lg">
-                  InfluxDB es una base de datos de series temporales (TSDB) de
-                  código abierto desarrollada por la empresa InfluxData. Está
-                  escrita en el lenguaje de programación Go para el
-                  almacenamiento y la recuperación de datos de
-                  <strong>series temporales</strong>
-                  en campos como la monitorización de operaciones, las
-                  <strong> métricas de las aplicaciones </strong>, los datos de
-                  los sensores del <strong> Internet de las Cosas </strong> y
-                  los análisis en <strong>tiempo real</strong>. También tiene
-                  soporte para el procesamiento de datos de Graphite.
-                </p>
+            <div class="r-stack mx-16">
+              <div data-fragment-index="0" class="fragment fade-out">
+                <div class="flex items-center gap-10">
+                  <div class="text-gray-700 glassmorphism p-14">
+                    <h3 class="font-medium mb-6 text-xl text-left">InfluxDB</h3>
+                    <p class="text-justify font-extralight text-lg">
+                      InfluxDB es una base de datos de
+                      <strong>series temporales</strong> (TSDB) de
+                      <strong>código abierto</strong> desarrollada por la
+                      empresa InfluxData. Está escrita en el lenguaje de
+                      programación Go para el almacenamiento y la recuperación
+                      de datos de series temporales en campos como la
+                      <strong>monitorización de operaciones</strong>, las
+                      <strong> métricas de las aplicaciones </strong>, los datos
+                      de los sensores del
+                      <strong> Internet de las Cosas </strong> y los análisis en
+                      <strong>tiempo real</strong>. También tiene soporte para
+                      el procesamiento de datos de Graphite.
+                    </p>
+                  </div>
+                  <img
+                    width="700px"
+                    class="glassmorphism rounded-xl p-8"
+                    data-src="./src/images/influxdb.png"
+                    alt="InfluxDB logo"
+                  />
+                </div>
               </div>
-              <img
-                width="700px"
-                class="glassmorphism rounded-xl p-8"
-                data-src="./src/images/influxdb.png"
-                alt="InfluxDB logo"
-              />
+              <div
+                data-fragment-index="0"
+                class="fragment flex items-center gap-10"
+              >
+                <aside class="notes">
+                  QuestDB implementa el protocolo de línea InfluxDB para la
+                  ingesta de datos. Esto le permite utilizar QuestDB como
+                  sustituto de InfluxDB y otros que implementan el protocolo.
+                  QuestDB puede escuchar los paquetes del protocolo de línea
+                  tanto en TCP como en UDP.
+                </aside>
+                <div class="flex items-center gap-10">
+                  <div class="text-gray-700 glassmorphism p-14">
+                    <h3 class="font-medium mb-6 text-xl text-left">QuestDB</h3>
+                    <p class="text-justify font-extralight text-lg">
+                      QuestDB es una base de datos relacional
+                      <strong> orientada a columnas </strong> diseñada para
+                      <strong>series temporales y datos de eventos</strong>.
+                      Utiliza SQL con extensiones para series temporales que
+                      ayudan a realizar análisis en tiempo real.
+                      <br />
+                      <br />
+                      QuestDB utiliza un modelo de almacenamiento basado en
+                      columnas. Los datos se almacenan en tablas con cada
+                      columna almacenada en su <strong>propio archivo</strong> y
+                      su propio <strong>formato nativo</strong>. Los nuevos
+                      datos se añaden al final de cada columna para permitir que
+                      los datos se recuperen orgánicamente en el mismo orden en
+                      el que se ingirieron.
+                      <br />
+                      <br />
+                      La <strong>API REST</strong> de QuestDB se basa en las
+                      <strong> características estándar de HTTP </strong> y es
+                      entendida por los clientes HTTP estándar. Proporciona una
+                      forma sencilla de interactuar con QuestDB y es compatible
+                      con la mayoría de los lenguajes de programación. Las
+                      funciones de la API están totalmente
+                      <strong>codificadas en la URL</strong> y utilizan
+                      <strong>parámetros de consulta</strong> como argumentos.
+                    </p>
+                  </div>
+                  <img
+                    width="700px"
+                    class="glassmorphism rounded-xl p-8"
+                    data-src="./src/images/questdb.png"
+                    alt="QuestDB logo"
+                  />
+                </div>
+              </div>
             </div>
           </section>
         </section>
         <section
           data-background="linear-gradient(-20deg, #00cdac 0%, #8ddad5 100%)"
         >
+          <aside class="notes">
+            En caso de que no haya conexión a internet es posible copiar los
+            datos desde la base de datos en local a la nube utilizando un
+            proceso de InfluxDB llamado replicación
+          </aside>
           <div class="flex items-center justify-evenly h-screen">
             <h1
               class="
