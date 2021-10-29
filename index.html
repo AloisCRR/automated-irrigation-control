@@ -11,13 +11,20 @@
         <section
           data-menu-title="Portada"
           data-background-image="./src/images/intro-bg.jpg"
-          data-background-opacity="0.3"
+          data-background-opacity="0.2"
         >
           <div class="center">
-            <h1 class="tracking-wide font-black text-6xl">
-              Sistema de control de agua basado en IoT
+            <h1 class="max-w-7xl">
+              <span
+                class="inline-block mb-10 tracking-widest font-black text-6xl"
+                >Revisión de tecnologías</span
+              >
+              <span class="inline-block text-3xl font-semibold">
+                Sistema inteligente para la optimización y automatización del
+                control de irrigación en cultivos utilizando tecnologías IoT
+              </span>
             </h1>
-            <p class="font-extralight my-8 text-3xl">
+            <p class="font-extralight my-10 text-3xl">
               Alois Carrera | Universidad Tecnológica de Panamá
             </p>
             <div>
@@ -225,7 +232,7 @@
               alt="Irrigation image 4"
             />
           </div>
-          <h1 class="text-7xl font-semibold mt-24 mb-20 p-2">
+          <h1 class="text-7xl font-semibold mt-48 mb-20 p-2">
             Análisis del problema
           </h1>
           <div class="flex justify-center items-start">
@@ -233,16 +240,20 @@
               <p class="text-justify max-w-6xl font-extralight text-2xl">
                 El reto por superar es la <strong>automatización</strong>, ¿cómo
                 se puede implementar un sistema inteligente que maneje y
-                optimice una finca en estado de producción?, es una situación
-                compleja que en la actualidad puede ser modelada utilizando
+                optimice una finca en estado de producción?, donde el acceso a
+                la <strong>electricidad es nulo</strong> y tampoco se dispone de
+                una <strong>conexión a internet</strong> más allá de la
+                disponible mediante telefonía móvil. Es una situación compleja
+                que en la actualidad puede ser modelada utilizando
                 <strong>tecnología IoT</strong>, esta tecnología no es más que
-                todos aquellos dispositivos con capacidad de interconectarse con
-                otros o con un dispositivo central que actúe como base de
-                procesamiento, estos también cumplen la función de recolectar
-                cantidades exorbitantes de <strong>datos</strong>, los cuales
-                posteriormente pueden ser analizados para generar modelos que
-                respondan ante cierta característica que sea escogida, como por
-                ejemplo el <strong>control de agua</strong>.
+                todos aquellos dispositivos con
+                <strong>capacidad de interconectarse</strong> con otros o con un
+                dispositivo central que actúe como base de procesamiento, estos
+                también cumplen la función de recolectar cantidades exorbitantes
+                de <strong>datos</strong>, los cuales posteriormente pueden ser
+                analizados para generar modelos que respondan ante cierta
+                característica que sea escogida, como por ejemplo el
+                <strong>control de agua</strong>.
               </p>
             </div>
           </div>
@@ -266,7 +277,14 @@
             </p>
           </section>
           <section>
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <aside class="notes">
+              Es posible calcular el gasto de agua de manera simple utilizando
+              el diámetro del tubo o manguera, realizando la diferencia de
+              presión entre el principio y el final del tubo, contando con la
+              longitud total del tubo y listo. Eso será posible manejarlo desde
+              una interfaz.
+            </aside>
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">Sensores</h1>
               <img
                 class="ml-8 inline opacity-80"
@@ -344,7 +362,12 @@
           <section
             data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
           >
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <aside class="notes">
+              No todas las electroválvulas son compatibles con arduino, pero
+              todas funcionan a 12 o 25 voltios, por lo tanto se puede utilizar
+              un relé conectado al arduino y listo.
+            </aside>
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">Actuadores</h1>
               <img
                 class="ml-8 inline opacity-80"
@@ -392,7 +415,13 @@
             </div>
           </section>
           <section>
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <aside class="notes">
+              Comunicación con dispositivos similares como podrían ser dos
+              teléfonos utilizando bluetooth.
+              <br />
+              <br />
+            </aside>
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">Comunicación</h1>
               <img
                 class="ml-8 inline opacity-80"
@@ -530,7 +559,7 @@
           <section
             data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
           >
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">
                 Microcontrolador
               </h1>
@@ -571,7 +600,7 @@
                   que implementa el lenguaje Processing/Wiring.
                   <br />
                   <br />
-                  <span>Precio: <strong>~15-25 USD</strong></span>
+                  <span>Precio: <strong>~8-15 USD</strong></span>
                 </p>
               </div>
               <div
@@ -610,6 +639,34 @@
           <section
             data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
           >
+            <aside class="notes">
+              Dentro de las redes LPWAN se encuentra LoRa y Sigfox. Sigfox viene
+              siendo una alternativa a las redes GSM/3G/4G, cuentan con una API
+              y con cobertura como si fuera un operador de teléfono más pero
+              orientado a telemetría y sistemas IoT, utilizando tecnología de
+              banda ultra estrecha.
+              <br />
+              <br />
+              Los módulos Xbee son normalmente más caros porque el protocolo es
+              propietario, es de una empresa llamada Digi International. Para
+              utilizar la modalidad de largo alcance ese necesario utilizar los
+              dispositivos y el protocolo propietario de Digi, que se llama
+              DigiMesh.
+              <br />
+              <br />
+              Z-Wave y ZigBee son bastante parecidos, pero la principal
+              diferencia es que Z-Wave es propietario y para distribuir
+              dispositivos con este protocolo es necesario contar con una
+              certificación de la empresa propietaria. ZigBee es un estándar
+              abierto lo cual conlleva a que sea más complicado hacer que muchos
+              dispositivos funcionen entre sí, a pesar de compartir el mismo
+              estándar. Cabe recalcar que ambos consumen muy poca energía y en
+              cuestión de frecuencias ZigBee utiliza la banda de 2.4 Ghz lo cual
+              puede general problemas ya que interfiere con el Wi-Fi, en cambio
+              Z-Wave usa la banda de 908.42 MHz. ZigBee tiene la capacidad de
+              transmitir hasta 250 Kbps y Z-Wave solo 100 Kbps, además de que
+              ZigBee tiene mucho mas alcance.
+            </aside>
             <div class="p-8 mt-24 glassmorphism inline-flex items-center">
               <h1 class="text-5xl font-semibold text-gray-700">
                 Protocolos de comunicación
@@ -739,6 +796,12 @@
           <section
             data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
           >
+            <aside class="notes">
+              Sobre el RFM69 se puede destacar su alta tolerancia a
+              interferencias y que es capaz de alcanzar hasta 1.2 km de
+              distancia de comunicación en campo abierto, dependiendo de la
+              frecuencia utilizada y el tamaño de la transmisión de datos.
+            </aside>
             <div class="p-8 mt-24 glassmorphism inline-flex items-center">
               <h1 class="text-5xl font-semibold text-gray-700">
                 Dispositivos de comunicación
@@ -910,7 +973,7 @@
           <section
             data-background="linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
           >
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">Gateway</h1>
               <img
                 class="ml-8 inline opacity-80"
@@ -1034,7 +1097,7 @@
             </p>
           </section>
           <section>
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">
                 Framework Arduino
               </h1>
@@ -1108,7 +1171,7 @@
             </div>
           </section>
           <section>
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">Controlador</h1>
               <img
                 class="ml-8 inline opacity-80"
@@ -1200,7 +1263,90 @@
             </div>
           </section>
           <section>
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
+              <h1 class="text-7xl font-semibold text-gray-700">
+                Protocolo de red
+              </h1>
+              <img
+                class="ml-8 inline opacity-80"
+                data-src="./src/images/network-protocol.png"
+                width="100px"
+                height="100px"
+                alt="Network protocol icon"
+              />
+            </div>
+            <p class="my-14 text-gray-700 text-xl font-light">
+              Protocolo de red de publicación-suscripción que transporta
+              mensajes entre dispositivos.
+            </p>
+            <div
+              class="
+                text-gray-700
+                flex
+                items-center
+                justify-center
+                gap-10
+                mx-10
+              "
+            >
+              <div
+                class="
+                  list
+                  p-16
+                  text-justify text-lg
+                  glassmorphism
+                  font-light
+                  max-w-6xl
+                "
+              >
+                <p>
+                  MQTT son las siglas de Message Queuing Telemetry Transport. Se
+                  trata de un protocolo de mensajería ligero que se utiliza en
+                  los casos en los que los clientes necesitan
+                  <strong> pequeñas cantidades de código </strong> y están
+                  conectados a redes poco fiables o con recursos de
+                  <strong> ancho de banda limitados </strong>. Se utiliza
+                  principalmente para la comunicación máquina a máquina (M2M) o
+                  para conexiones del tipo Internet de las Cosas.
+                  <br />
+                  <br />
+                  MQTT se ejecuta sobre TCP/IP utilizando una topología
+                  <strong>PUSH/SUBSCRIBE</strong>. En la arquitectura MQTT, hay
+                  dos tipos de sistemas: <strong>clientes y brokers</strong>. Un
+                  broker es el servidor con el que se comunican los clientes. El
+                  broker recibe las comunicaciones de los clientes y las envía a
+                  otros clientes. Los clientes
+                  <strong> no se comunican directamente entre sí </strong>, sino
+                  que se conectan al broker. Cada cliente puede ser un
+                  publicador, un suscriptor o ambos.
+                  <br />
+                  <br />
+                  MQTT es un <strong>protocolo basado en eventos</strong>. No
+                  hay una transmisión de datos
+                  <strong>periódica o continua</strong>. Esto mantiene la
+                  transmisión al mínimo. Un cliente
+                  <strong>sólo publica</strong> cuando hay información que
+                  enviar, y un broker <strong>sólo envía</strong> información a
+                  los suscriptores cuando llegan nuevos datos.
+                </p>
+              </div>
+              <div class="flex flex-col items-center gap-3">
+                <img
+                  class="glassmorphism rounded-xl p-8"
+                  data-src="./src/images/mqtt.png"
+                  alt="Mqtt example"
+                />
+                <img
+                  width="400px"
+                  class="glassmorphism rounded-xl p-8"
+                  data-src="./src/images/mqtt-1.webp"
+                  alt="Mqtt example"
+                />
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">
                 Monitorización
               </h1>
@@ -1323,7 +1469,7 @@
             </div>
           </section>
           <section>
-            <div class="p-8 mt-20 glassmorphism inline-flex items-center">
+            <div class="p-8 mt-40 glassmorphism inline-flex items-center">
               <h1 class="text-7xl font-semibold text-gray-700">
                 Base de datos
               </h1>
@@ -1373,7 +1519,7 @@
               class="
                 inline-block
                 p-8
-                mt-20
+                mt-40
                 black-glassmorphism
                 text-7xl
                 font-semibold
@@ -1392,7 +1538,7 @@
               class="
                 inline-block
                 p-8
-                mt-20
+                mt-40
                 black-glassmorphism
                 text-7xl
                 font-semibold
@@ -1410,46 +1556,147 @@
         <section
           data-background="linear-gradient(to top, #e6b980 0%, #eacda3 100%)"
         >
-          <div class="p-8 mt-20 mb-16 glassmorphism inline-flex items-center">
-            <h1 class="text-7xl font-semibold text-gray-700">Avances</h1>
-            <img
-              class="ml-8 inline opacity-80"
-              data-src="./src/images/progress.png"
-              width="100px"
-              height="100px"
-              alt="Progress icon"
-            />
-          </div>
-          <div class="r-stack">
-            <div class="fragment fade-out" data-fragment-index="0">
+          <section>
+            <div class="p-8 mt-40 mb-16 glassmorphism inline-flex items-center">
+              <h1 class="text-7xl font-semibold text-gray-700">Avances</h1>
               <img
-                class="glassmorphism rounded-xl p-8"
-                data-src="./src/images/irrigation-control.png"
-                alt="Irrigation control progress"
+                class="ml-8 inline opacity-80"
+                data-src="./src/images/progress.png"
+                width="100px"
+                height="100px"
+                alt="Progress icon"
               />
             </div>
-            <div class="fragment current-visible" data-fragment-index="0">
+            <div class="r-stack">
+              <div class="fragment fade-out" data-fragment-index="0">
+                <img
+                  class="glassmorphism rounded-xl p-8"
+                  data-src="./src/images/irrigation-control.png"
+                  alt="Irrigation control progress"
+                />
+              </div>
+              <div class="fragment current-visible" data-fragment-index="0">
+                <img
+                  class="glassmorphism rounded-xl p-8"
+                  data-src="./src/images/irrigation-control-controller-settings.png"
+                  alt="Irrigation control settings progress"
+                />
+              </div>
+              <div class="fragment">
+                <img
+                  class="glassmorphism rounded-xl p-8"
+                  data-src="./src/images/get-sensors-data.png"
+                  alt="Irrigation control settings progress"
+                />
+              </div>
+            </div>
+          </section>
+          <section>
+            <div class="p-8 mt-40 mb-24 glassmorphism inline-flex items-center">
+              <h1 class="text-7xl font-semibold text-gray-700">Sistema Web</h1>
               <img
-                class="glassmorphism rounded-xl p-8"
-                data-src="./src/images/irrigation-control-controller-settings.png"
-                alt="Irrigation control settings progress"
+                class="ml-8 inline opacity-80"
+                data-src="./src/images/progress.png"
+                width="100px"
+                height="100px"
+                alt="Progress icon"
               />
             </div>
-            <div class="fragment">
+            <div class="flex items-center justify-center">
               <img
-                class="glassmorphism rounded-xl p-8"
-                data-src="./src/images/get-sensors-data.png"
-                alt="Irrigation control settings progress"
-              />
-            </div>
-            <div class="fragment">
-              <img
-                width="900px"
-                class="glassmorphism rounded-xl p-8"
+                width="800px"
+                class="glassmorphism rounded-xl"
                 data-src="./src/images/html-sensors-data.png"
-                alt="Irrigation control settings progress"
+                alt="Irrigation control html progress"
+              />
+              <img
+                class="mx-8"
+                data-src="./src/images/right-arrow.png"
+                alt="Right arrow"
+              />
+              <div class="flex flex-col items-center gap-5">
+                <img
+                  width="200px"
+                  data-src="./src/images/aws-logo.png"
+                  alt="AWS Logo"
+                />
+                <img
+                  width="200px"
+                  data-src="./src/images/azure-logo.png"
+                  alt="Azure Logo"
+                />
+                <img
+                  width="300px"
+                  data-src="./src/images/influxdb.png"
+                  alt="InfluxDB Logo"
+                />
+                <img
+                  width="200px"
+                  data-src="./src/images/mqtt-logo.png"
+                  alt="MQTT Logo"
+                />
+              </div>
+              <img
+                class="mx-8"
+                data-src="./src/images/right-arrow.png"
+                alt="Right arrow"
+              />
+              <img
+                width="200px"
+                data-src="./src/images/react-logo.png"
+                alt="React logo"
               />
             </div>
+          </section>
+        </section>
+        <section
+          data-background="linear-gradient(to right, #ed6ea0 0%, #ec8c69 100%)"
+        >
+          <h1 class="text-7xl font-semibold mt-48 mb-20 p-2">Conclusiones</h1>
+          <div class="flex justify-center items-start">
+            <div class="black-glassmorphism p-12">
+              <p class="text-justify max-w-6xl font-extralight text-2xl">
+                El mal control del agua puede afectar la producción de los
+                cultivos, ya que en <strong>épocas de sequía</strong> es
+                indispensable gestionarla lo mejor posible, para ello el uso de
+                la <strong> tecnología informática </strong>, diferentes tipos
+                de <strong>sensores</strong> y
+                <strong> herramientas automatizadas </strong> pueden ayudar
+                enormemente a solventar el problema de la escasez de agua,
+                proveyendo una solución capaz de operar
+                <strong>sin intervención humana</strong>, las
+                <strong>24 horas del día</strong> gracias al
+                <strong> poco consumo energético </strong> y ofreciendo una tasa
+                de optimización alta en comparación a otros sistemas, lo cual se
+                traduce en la reducción de problemas a largo plazo para los
+                productores.
+                <br />
+                <br />
+                Actualmente el proyecto cuenta con una
+                <strong>arquitectura base</strong> para partir, el diseño de los
+                nodos y la comunicación entre estos es
+                <strong>robusta y fiable</strong>. Todas las tecnologías, tanto
+                de software como de hardware seleccionadas son
+                <strong>Open Source</strong>, lo cual contribuye al desarrollo
+                de la comunidad y además se obtiene un
+                <strong>ahorro en los costos</strong>. Los pasos siguientes son
+                el desarrollo de la capa de transmisión de datos a través del
+                <strong>protocolo MQTT</strong> y utilizando una
+                <strong>REST o GraphQL</strong>
+                API se consumirán los datos y la analítica desde una aplicación
+                web dónde el usuario pueda ver la información en
+                <strong> cualquier parte del mundo </strong>.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section data-menu-title="Despedida">
+          <div class="center">
+            <h1 class="text-8xl">
+              ¡Muchas gracias por la atención! <br />
+              <br />
+              👋🏼😄
+            </h1>
           </div>
         </section>
       </div>
